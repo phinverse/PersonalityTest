@@ -1,5 +1,4 @@
 // ignore_for_file: unnecessary_string_interpolations, unnecessary_brace_in_string_interps, prefer_interpolation_to_compose_strings, sort_child_properties_last, prefer_const_constructors
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'constrants/routes.dart';
@@ -15,7 +14,10 @@ void main() {
           fontFamily: 'Roboto',
           brightness: Brightness.dark,
           unselectedWidgetColor: Colors.white),
-      routes: {secondPageRoute: (context) => SecondPageView()},
+      routes: {
+        secondPageRoute: (context) => QuestionsView(),
+        homePageRoute: (context) => HomePageView()
+      },
     ),
   );
 }
@@ -28,20 +30,23 @@ class HomePageView extends StatefulWidget {
 }
 
 class _HomePageViewState extends State<HomePageView> {
-  bool isPressed = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.grey[900],
-        title: Center(child: Text('16 Personality Test')),
+        title: Center(
+            child: Text(
+          'MBTI Personality Test',
+          style: TextStyle(color: Colors.white),
+        )),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Welcome to our project',
+            Text('Greetings, fellow human.',
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.white,
@@ -52,19 +57,14 @@ class _HomePageViewState extends State<HomePageView> {
                   fontSize: 24,
                   color: Colors.white,
                 )),
-            Text("choose wisely :')",
+            Text('all guilt-free with zero calories!',
                 style: TextStyle(
                   fontSize: 24,
-                  color: Colors.red,
+                  color: Colors.greenAccent,
                   fontWeight: FontWeight.bold,
                 )),
             SizedBox(height: 20),
-            Text('Get your personality type by',
-                style: TextStyle(
-                  fontSize: 22,
-                  color: Colors.white,
-                )),
-            Text('simply answering few questions',
+            Text('Take the 2-min Survey Now',
                 style: TextStyle(
                   fontSize: 22,
                   color: Colors.white,
@@ -72,11 +72,9 @@ class _HomePageViewState extends State<HomePageView> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SecondPageView(),
-                  ),
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                  secondPageRoute,
+                  (route) => false,
                 );
               },
               style: ElevatedButton.styleFrom(
