@@ -23,7 +23,7 @@ class SecondtQuestionsViewState extends State<SecondQuestionsView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-             QuestionWidget(
+            QuestionWidget(
                 text: 'You are an empathetic person',
                 radioButton: 20,
                 personalities: 6),
@@ -65,7 +65,6 @@ class SecondtQuestionsViewState extends State<SecondQuestionsView> {
                 text: "You enjoy spending time in nature",
                 radioButton: 29,
                 personalities: 1),
-
             QuestionWidget(
                 text: "You enjoy problem-solving and",
                 text2: 'creative solutions to challenges',
@@ -104,7 +103,6 @@ class SecondtQuestionsViewState extends State<SecondQuestionsView> {
                 text: "You are an adventurous person",
                 radioButton: 39,
                 personalities: 7),
-        
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -126,24 +124,45 @@ class SecondtQuestionsViewState extends State<SecondQuestionsView> {
                       textStyle:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                 ),
-                Text(
-                  '1',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
-                ),
-                Text('2',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.greenAccent,
-                      fontSize: 20,
-                    )),
-                Text('3',
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      firstPageRoute,
+                      (route) => false,
+                    );
+                  },
+                  child: Text(
+                    '1',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
-                    )),
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text('2',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.greenAccent,
+                        fontSize: 20,
+                      )),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      thirdPageRoute,
+                      (route) => true,
+                    );
+                  },
+                  child: Text('3',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Colors.white,
+                      )),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: ElevatedButton(

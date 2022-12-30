@@ -109,7 +109,6 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
                 text2: 'large groups of people',
                 radioButton: 19,
                 personalities: 0),
-           
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -131,12 +130,15 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
                       textStyle:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                 ),
-                Text(
-                  '1',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.greenAccent,
-                    fontSize: 20,
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    '1',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.greenAccent,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
                 Text('...',
@@ -144,11 +146,19 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     )),
-                Text('3',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    )),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      thirdPageRoute,
+                      (route) => true,
+                    );
+                  },
+                  child: Text('3',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          color: Colors.white)),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: ElevatedButton(

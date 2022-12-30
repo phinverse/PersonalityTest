@@ -14,12 +14,15 @@ Future<void> showPersonalityDialogue(
         backgroundColor: backgroundColor,
         elevation: 5,
         title: const Text(
-          'Your personality type',
-          style: TextStyle(fontSize: 24, color: Colors.greenAccent),
+          'YOUR PERSONALITY TYPE',
+          style: TextStyle(
+              fontSize: 20,
+              color: Colors.redAccent,
+              fontWeight: FontWeight.bold),
         ),
         content: Text(
           text,
-          style: const TextStyle(fontSize: 22, color: Colors.greenAccent),
+          style: const TextStyle(fontSize: 20, color: Colors.greenAccent),
         ),
         actions: [
           TextButton(
@@ -27,7 +30,7 @@ Future<void> showPersonalityDialogue(
               Navigator.of(context).pop();
             },
             child: const Icon(
-              CupertinoIcons.hand_thumbsup,
+              CupertinoIcons.clear_circled,
               color: Colors.redAccent,
               size: 24.0,
               semanticLabel: 'Text to announce in accessibility modes',
