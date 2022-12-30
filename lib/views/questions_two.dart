@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:psycho/constrants/routes.dart';
 import 'package:psycho/utilities/question_widget.dart';
 
-class FirstQuestionsView extends StatefulWidget {
-  const FirstQuestionsView({super.key});
+class SecondQuestionsView extends StatefulWidget {
+  const SecondQuestionsView({super.key});
 
   @override
-  FirstQuestionsViewState createState() => FirstQuestionsViewState();
+  SecondtQuestionsViewState createState() => SecondtQuestionsViewState();
 }
 
-class FirstQuestionsViewState extends State<FirstQuestionsView> {
+class SecondtQuestionsViewState extends State<SecondQuestionsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,100 +23,95 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+             QuestionWidget(
+                text: 'You are an empathetic person',
+                radioButton: 20,
+                personalities: 6),
             QuestionWidget(
-                text: 'You avoid being alone',
-                radioButton: 0,
-                personalities: 0),
+                text: "You enjoy taking risks",
+                radioButton: 21,
+                personalities: 7),
             QuestionWidget(
-                text: 'You tend to make decisions quickly',
-                radioButton: 1,
+                text: 'You prefer to plan things in advance',
+                text2: 'rather than being spontaneous',
+                radioButton: 22,
+                personalities: 3),
+            QuestionWidget(
+                text: 'You are a decisive person',
+                radioButton: 23,
                 personalities: 2),
             QuestionWidget(
-                text: 'You are really a curious person',
-                radioButton: 2,
-                personalities: 7),
-            QuestionWidget(
-                text: "You enjoy trying new things and",
-                text2: "Stepping outside of your comfort zone",
-                radioButton: 3,
-                personalities: 7),
-            QuestionWidget(
-                text: 'You prefer structured over',
-                text2: 'unstructured activities',
-                radioButton: 4,
-                personalities: 3),
-            QuestionWidget(
-                text: 'You are naturally an optimistic person',
-                radioButton: 5,
-                personalities: 6),
-            QuestionWidget(
-                text: 'You enjoy being the center of attention',
-                radioButton: 6,
-                personalities: 0),
-            QuestionWidget(
-                text: 'You consider yourself as a',
-                text2: 'highly organized person',
-                radioButton: 7,
-                personalities: 3),
-            QuestionWidget(
-                text: 'You enjoy taking on leadership roles',
-                radioButton: 8,
-                personalities: 0),
-            QuestionWidget(
-                text: 'You are nataurally a patient person',
-                radioButton: 9,
-                personalities: 7),
-            QuestionWidget(
-                text: 'You enjoy meeting',
-                text2: 'new people and socializing',
-                radioButton: 10,
-                personalities: 0),
-            QuestionWidget(
-                text: "You tend to be a private person",
-                radioButton: 11,
-                personalities: 4),
-            QuestionWidget(
-                text: 'You are a logical and analytical thinker',
-                radioButton: 12,
+                text: 'You are a competitive person',
+                radioButton: 24,
                 personalities: 2),
             QuestionWidget(
-                text: 'You are a creative person',
-                radioButton: 13,
+                text: 'You enjoy being around animals',
+                radioButton: 25,
+                personalities: 1),
+            QuestionWidget(
+                text: 'You prefer intellectual discussions',
+                radioButton: 26,
+                personalities: 5),
+            QuestionWidget(
+                text: "You're comfortable with",
+                text2: "change and uncertainty",
+                radioButton: 27,
                 personalities: 7),
             QuestionWidget(
-                text: 'You enjoy physical activities and sports',
-                radioButton: 14,
-                personalities: 3),
+                text: "You are more of a morning person",
+                radioButton: 28,
+                personalities: 1),
             QuestionWidget(
-                text: 'You generally prioritize the needs',
-                text2: 'of others over your own',
-                radioButton: 15,
-                personalities: 6),
+                text: "You enjoy spending time in nature",
+                radioButton: 29,
+                personalities: 1),
+
             QuestionWidget(
-                text: 'You are naturally an organized person',
-                radioButton: 16,
-                personalities: 7),
+                text: "You enjoy problem-solving and",
+                text2: 'creative solutions to challenges',
+                radioButton: 30,
+                personalities: 5),
             QuestionWidget(
-                text: 'You consider yourself as a perfectionist',
-                radioButton: 17,
-                personalities: 3),
+                text: "You enjoy being around people",
+                text2: 'who have similar interests to you',
+                radioButton: 31,
+                personalities: 1),
             QuestionWidget(
-                text: 'You are a good listener',
-                radioButton: 18,
-                personalities: 6),
-            QuestionWidget(
-                text: 'You enjoy being around',
-                text2: 'large groups of people',
-                radioButton: 19,
+                text: "You prefer to work in a team",
+                radioButton: 32,
                 personalities: 0),
-           
+            QuestionWidget(
+                text: "You are comfortable speaking in public",
+                radioButton: 33,
+                personalities: 0),
+            QuestionWidget(
+                text: "You enjoy learning new things",
+                radioButton: 34,
+                personalities: 5),
+            QuestionWidget(
+                text: "You are a forgiving person",
+                radioButton: 35,
+                personalities: 6),
+            QuestionWidget(
+                text: "You enjoy being around children",
+                radioButton: 36,
+                personalities: 1),
+            QuestionWidget(
+                text: "You are a compassionate person",
+                radioButton: 37,
+                personalities: 6),
+            QuestionWidget(
+                text: "You are an adventurous person",
+                radioButton: 39,
+                personalities: 7),
+        
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).pushNamedAndRemoveUntil(
-                      homePageRoute,
+                      firstPageRoute,
                       (route) => false,
                     );
                   },
@@ -135,13 +130,13 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
                   '1',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.greenAccent,
-                    fontSize: 20,
+                    fontSize: 16,
                   ),
                 ),
-                Text('...',
+                Text('2',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
+                      color: Colors.greenAccent,
                       fontSize: 20,
                     )),
                 Text('3',
@@ -154,7 +149,7 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).pushNamedAndRemoveUntil(
-                        secondPageRoute,
+                        thirdPageRoute,
                         (route) => true,
                       );
                     },

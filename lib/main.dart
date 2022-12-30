@@ -15,7 +15,9 @@ void main() {
           brightness: Brightness.dark,
           unselectedWidgetColor: Colors.white),
       routes: {
-        secondPageRoute: (context) => QuestionsView(),
+        firstPageRoute: (context) => FirstQuestionsView(),
+        secondPageRoute: (context) => SecondQuestionsView(),
+        thirdPageRoute: (context) => ThirdQuestionsView(),
         homePageRoute: (context) => HomePageView()
       },
     ),
@@ -38,7 +40,7 @@ class _HomePageViewState extends State<HomePageView> {
         backgroundColor: Colors.grey[900],
         title: Center(
             child: Text(
-          'MBTI Personality Test',
+          '16 Personalities Test',
           style: TextStyle(color: Colors.white),
         )),
       ),
@@ -64,7 +66,7 @@ class _HomePageViewState extends State<HomePageView> {
                   fontWeight: FontWeight.bold,
                 )),
             SizedBox(height: 20),
-            Text('Take the 2-min Survey Now',
+            Text('Take the 5-min Survey Now',
                 style: TextStyle(
                   fontSize: 22,
                   color: Colors.white,
@@ -73,16 +75,16 @@ class _HomePageViewState extends State<HomePageView> {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamedAndRemoveUntil(
-                  secondPageRoute,
-                  (route) => false,
+                  firstPageRoute,
+                  (route) => true,
                 );
               },
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
+                  backgroundColor: Colors.greenAccent,
                   textStyle:
                       TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               child: Icon(
-                CupertinoIcons.arrow_right_circle_fill,
+                CupertinoIcons.chevron_forward,
                 color: Colors.white,
                 size: 24.0,
                 semanticLabel: 'Text to announce in accessibility modes',

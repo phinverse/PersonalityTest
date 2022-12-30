@@ -8,6 +8,7 @@ class QuestionWidget extends StatefulWidget {
   int personalities;
   final String text2;
   QuestionWidget({
+    super.key,
     required this.text,
     required this.radioButton,
     required this.personalities,
@@ -15,10 +16,10 @@ class QuestionWidget extends StatefulWidget {
   });
 
   @override
-  _QuestionViewState createState() => _QuestionViewState();
+  QuestionViewState createState() => QuestionViewState();
 }
 
-class _QuestionViewState extends State<QuestionWidget> {
+class QuestionViewState extends State<QuestionWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
