@@ -112,7 +112,7 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
+                TextButton(
                   onPressed: () {
                     Navigator.of(context).pushNamedAndRemoveUntil(
                       homePageRoute,
@@ -121,12 +121,11 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
                   },
                   child: Icon(
                     CupertinoIcons.chevron_back,
-                    color: Colors.white,
+                    color: Colors.greenAccent,
                     size: 24.0,
                     semanticLabel: 'Text to announce in accessibility modes',
                   ),
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
+                  style: TextButton.styleFrom(
                       textStyle:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                 ),
@@ -136,14 +135,15 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
                     '1',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.greenAccent,
-                      fontSize: 20,
+                      color: Colors.redAccent,
+                      fontSize: 22,
                     ),
                   ),
                 ),
                 Text('...',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
+                      color: Colors.greenAccent,
                       fontSize: 20,
                     )),
                 TextButton(
@@ -157,11 +157,11 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
-                          color: Colors.white)),
+                          color: Colors.greenAccent)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
-                  child: ElevatedButton(
+                  child: TextButton(
                     onPressed: () {
                       Navigator.of(context).pushNamedAndRemoveUntil(
                         secondPageRoute,
@@ -170,12 +170,11 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
                     },
                     child: Icon(
                       CupertinoIcons.chevron_forward,
-                      color: Colors.white,
+                      color: Colors.greenAccent,
                       size: 24.0,
                       semanticLabel: 'Text to announce in accessibility modes',
                     ),
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.greenAccent,
+                    style: TextButton.styleFrom(
                         textStyle: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold)),
                   ),

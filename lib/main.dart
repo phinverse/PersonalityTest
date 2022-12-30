@@ -80,9 +80,8 @@ class _HomePageViewState extends State<HomePageView> {
                 );
               },
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.greenAccent,
-                  textStyle:
-                      TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                backgroundColor: Colors.greenAccent,
+              ),
               child: Icon(
                 CupertinoIcons.chevron_forward,
                 color: Colors.white,
