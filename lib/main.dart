@@ -73,7 +73,7 @@ class HomePageView extends StatelessWidget {
                   fontSize: 22,
                 )),
             Text(
-              'Muchos gracias...',
+              'Fangs! 🧛',
               style: TextStyle(
                 fontSize: 22,
                 color: Colors.greenAccent,
