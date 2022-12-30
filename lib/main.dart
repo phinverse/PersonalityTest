@@ -55,7 +55,7 @@ class HomePageView extends StatelessWidget {
                   color: Colors.white,
                 )),
             SizedBox(height: 20),
-            Text('Checkout your personality type',
+            Text('Checkout your personality types',
                 style: TextStyle(
                   fontSize: 22,
                   color: Colors.white,
