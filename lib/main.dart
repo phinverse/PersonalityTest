@@ -72,6 +72,13 @@ class HomePageView extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 22,
                 )),
+            Text(
+              'Muchos gracias...',
+              style: TextStyle(
+                fontSize: 22,
+                color: Colors.greenAccent,
+              ),
+            ),
             SizedBox(height: 10),
             SizedBox(height: 10),
             Row(
