@@ -1,5 +1,5 @@
 // ignore_for_file: unnecessary_string_interpolations, unnecessary_brace_in_string_interps, prefer_interpolation_to_compose_strings, sort_child_properties_last, prefer_const_constructors
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'constrants/routes.dart';
 import 'views/views.dart';
@@ -11,7 +11,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: HomePageView(),
       theme: ThemeData(
-          fontFamily: 'Roboto',
+          fontFamily: 'Poppins',
           brightness: Brightness.dark,
           unselectedWidgetColor: Colors.white),
       routes: {
@@ -24,14 +24,9 @@ void main() {
   );
 }
 
-class HomePageView extends StatefulWidget {
+class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
 
-  @override
-  State<HomePageView> createState() => _HomePageViewState();
-}
-
-class _HomePageViewState extends State<HomePageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +35,7 @@ class _HomePageViewState extends State<HomePageView> {
         backgroundColor: Colors.grey[900],
         title: Center(
             child: Text(
-          '16 Personalities Test',
+          '16 Personality Test',
           style: TextStyle(color: Colors.white),
         )),
       ),
@@ -48,20 +43,26 @@ class _HomePageViewState extends State<HomePageView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(
+                height: 300,
+                width: 300,
+                child: Image(
+                    repeat: ImageRepeat.repeat,
+                    image: AssetImage('assets/images/vrilustration.png'))),
             Text('Greetings, fellow human.',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 22,
                   color: Colors.white,
                 )),
             SizedBox(height: 20),
-            Text('So much to choose from',
+            Text('Checkout your personality type',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 22,
                   color: Colors.white,
                 )),
             Text('all guilt-free with zero calories!',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 22,
                   color: Colors.greenAccent,
                   fontWeight: FontWeight.bold,
                 )),
@@ -80,13 +81,12 @@ class _HomePageViewState extends State<HomePageView> {
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.greenAccent,
+                backgroundColor: Colors.redAccent,
               ),
-              child: Icon(
-                CupertinoIcons.chevron_forward,
-                color: Colors.white,
-                size: 24.0,
-                semanticLabel: 'Text to announce in accessibility modes',
+              child: Text(
+                'START',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),
             ),
           ],

@@ -62,15 +62,18 @@ class ThirdionsViewState extends State<ThirdQuestionsView> {
                 radioButton: 47,
                 personalities: 5),
             QuestionWidget(
-                text: "You enjoy expressing your ideas and opinions",
+                text: "You enjoy expressing your",
+                text2: "ideas and opinions",
                 radioButton: 48,
                 personalities: 0),
             QuestionWidget(
-                text: "You are naturally a detail-oriented person",
+                text: "You are naturally a detail-oriented",
+                text2: "person",
                 radioButton: 49,
                 personalities: 1),
             QuestionWidget(
-                text: "You like helping others or providing support",
+                text: "You like helping others",
+                text2: "or providing support",
                 radioButton: 50,
                 personalities: 6),
             QuestionWidget(
@@ -166,14 +169,13 @@ class ThirdionsViewState extends State<ThirdQuestionsView> {
                   });
                 },
                 style: TextButton.styleFrom(
-                    backgroundColor: Colors.green,
+                    backgroundColor: Colors.redAccent,
                     textStyle:
                         TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-                child: Icon(
-                  CupertinoIcons.checkmark_circle,
-                  color: Colors.white,
-                  size: 24.0,
-                  semanticLabel: 'Text to announce in accessibility modes',
+                child: Text(
+                  'SUBMIT',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
