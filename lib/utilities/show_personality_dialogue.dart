@@ -30,7 +30,7 @@ Future<void> showPersonalityDialogue(
               Navigator.of(context).pop();
             },
             child: const Icon(
-              CupertinoIcons.clear_circled,
+              CupertinoIcons.clear,
               color: Colors.redAccent,
               size: 24.0,
               semanticLabel: 'Text to announce in accessibility modes',
