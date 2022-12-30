@@ -48,7 +48,7 @@ class ShortQuestionsViewState extends State<ShortQuestionsView> {
                 radioButton: 63,
                 personalities: 2),
             QuestionWidget(
-                text: 'You are a competitive person',
+                text: "You a naturally energetic person?",
                 radioButton: 64,
                 personalities: 2),
             QuestionWidget(
