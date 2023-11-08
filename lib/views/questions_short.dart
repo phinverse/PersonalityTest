@@ -2,11 +2,11 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:psycho/constrants/routes.dart';
-import 'package:psycho/utilities/calculator.dart';
-import 'package:psycho/utilities/question_widget.dart';
-import 'package:psycho/constrants/globals.dart';
-import 'package:psycho/utilities/show_personality_dialogue.dart';
+import 'package:export_readiness/constrants/routes.dart';
+import 'package:export_readiness/utilities/calculator.dart';
+import 'package:export_readiness/utilities/question_widget.dart';
+import 'package:export_readiness/constrants/globals.dart';
+import 'package:export_readiness/utilities/show_personality_dialogue.dart';
 import 'package:restart_app/restart_app.dart';
 
 class ShortQuestionsView extends StatefulWidget {

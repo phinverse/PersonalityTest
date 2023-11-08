@@ -2,107 +2,54 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:psycho/constrants/routes.dart';
-import 'package:psycho/utilities/question_widget.dart';
+import 'package:export_readiness/constrants/routes.dart';
+import 'package:export_readiness/utilities/question_widget.dart';
 
 class SecondQuestionsView extends StatefulWidget {
   const SecondQuestionsView({super.key});
 
   @override
-  SecondtQuestionsViewState createState() => SecondtQuestionsViewState();
+  SecondQuestionsViewState createState() => SecondQuestionsViewState();
 }
 
-class SecondtQuestionsViewState extends State<SecondQuestionsView> {
+class SecondQuestionsViewState extends State<SecondQuestionsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Color.fromARGB(255, 0, 131, 68),
+        title: Text("Products"),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 10),
+             Text('These sets of questions are designed to assess the readiness of the business in terms of the suitability of the products for consumers in the export market',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                )),
             QuestionWidget(
-                text: 'You are an empathetic person',
+                text: 'Are you familiar with the clear advantages that your product has over competing products?',
                 radioButton: 20,
                 personalities: 6),
             QuestionWidget(
-                text: "You enjoy taking risks",
+                text: "How satisfied are you about the resilience of your product to withstand the stress of freight and widely varying environmental conditions in the export market?",
                 radioButton: 21,
                 personalities: 7),
             QuestionWidget(
-                text: 'You prefer to plan things in advance',
-                text2: 'rather than being spontaneous',
+                text: 'How easy is it for anyone to use your companys product in the export market without any technical support?',
                 radioButton: 22,
-                personalities: 3),
+                personalities: 8),
             QuestionWidget(
-                text: 'You are a decisive person',
+                text: 'How will you describe the ease of adapting your product quality to make it suitable for the export market?',
                 radioButton: 23,
-                personalities: 2),
+                personalities: 9),
             QuestionWidget(
-                text: 'You are a competitive person',
+                text: ' How will you describe the quality of your product packaging and the conformity of the product’s labelling to requirements in the export market?',
                 radioButton: 24,
-                personalities: 2),
-            QuestionWidget(
-                text: 'You enjoy being around animals',
-                radioButton: 25,
-                personalities: 1),
-            QuestionWidget(
-                text: 'You prefer intellectual discussions',
-                radioButton: 26,
-                personalities: 5),
-            QuestionWidget(
-                text: "You're comfortable with",
-                text2: "change and uncertainty",
-                radioButton: 27,
-                personalities: 7),
-            QuestionWidget(
-                text: "You are more of a morning person",
-                radioButton: 28,
-                personalities: 1),
-            QuestionWidget(
-                text: "You enjoy spending time in nature",
-                radioButton: 29,
-                personalities: 1),
-            QuestionWidget(
-                text: "You enjoy problem-solving and",
-                text2: 'creative solutions to challenges',
-                radioButton: 30,
-                personalities: 5),
-            QuestionWidget(
-                text: "You enjoy being around people",
-                text2: 'who have similar interests to you',
-                radioButton: 31,
-                personalities: 1),
-            QuestionWidget(
-                text: "You prefer to work in a team",
-                radioButton: 32,
-                personalities: 0),
-            QuestionWidget(
-                text: "You are comfortable speaking in public",
-                radioButton: 33,
-                personalities: 0),
-            QuestionWidget(
-                text: "You enjoy learning new things",
-                radioButton: 34,
-                personalities: 5),
-            QuestionWidget(
-                text: "You are a forgiving person",
-                radioButton: 35,
-                personalities: 6),
-            QuestionWidget(
-                text: "You enjoy being around children",
-                radioButton: 36,
-                personalities: 1),
-            QuestionWidget(
-                text: "You are a compassionate person",
-                radioButton: 37,
-                personalities: 6),
-            QuestionWidget(
-                text: "You are an adventurous person",
-                radioButton: 39,
-                personalities: 7),
+                personalities: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -151,11 +98,11 @@ class SecondtQuestionsViewState extends State<SecondQuestionsView> {
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pushNamedAndRemoveUntil(
-                      thirdPageRoute,
+                      fifthPageRoute,
                       (route) => true,
                     );
                   },
-                  child: Text('3',
+                  child: Text('5',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
@@ -175,7 +122,7 @@ class SecondtQuestionsViewState extends State<SecondQuestionsView> {
                       CupertinoIcons.chevron_forward,
                       color: Colors.greenAccent,
                       size: 24.0,
-                      semanticLabel: 'Text to announce in accessibility modes',
+                      semanticLabel: 'Next Questions',
                     ),
                     style: TextButton.styleFrom(
                         textStyle: TextStyle(

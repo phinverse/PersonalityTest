@@ -14,7 +14,7 @@ Future<void> showPersonalityDialogue(
         backgroundColor: backgroundColor,
         elevation: 5,
         title: const Text(
-          'YOUR PERSONALITY TYPE',
+          'EXPORT READINESS ASSESSMENT',
           style: TextStyle(
               fontSize: 20,
               color: Colors.redAccent,

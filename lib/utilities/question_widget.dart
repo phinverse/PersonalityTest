@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:psycho/constrants/globals.dart';
+import 'package:export_readiness/constrants/globals.dart';
 
 class QuestionWidget extends StatefulWidget {
   final String text;
@@ -35,7 +35,7 @@ class QuestionViewState extends State<QuestionWidget> {
           Text(widget.text,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 18.0,
+                fontSize: 16.0,
               )),
           if (widget.text2 != '')
             Text(widget.text2,
@@ -46,40 +46,95 @@ class QuestionViewState extends State<QuestionWidget> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Accurate',
-                  style: TextStyle(
-                    color: Colors.greenAccent,
-                    fontSize: 20.0,
-                  )),
+              
               Transform.scale(
-                scale: 1.2,
-                child: Radio(
-                  value: 1,
-                  groupValue: radioButton[widget.radioButton],
-                  onChanged: (var value) {
+                scale: 1.0,
+                child: Column(
+                  children: [ Radio(
+                    value: 1,
+                    groupValue: radioButton[widget.radioButton],
+                    onChanged: (var value) {
                     setState(() {
                       personalities[widget.personalities] += 1;
 
                       radioButton[widget.radioButton] = value ?? 1;
                     });
-                  },
+                    }
+                    ),
+                    const Text('Very Low',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 252, 174, 111),
+                      fontSize: 12.0,
+                    )), 
+                  ]
                 ),
               ),
-              Radio(
-                value: 2,
-                groupValue: radioButton[widget.radioButton],
-                onChanged: (var value) {
-                  setState(() {
-                    personalities[widget.personalities] =
-                        personalities[widget.personalities];
-                    radioButton[widget.radioButton] = value ?? 2;
-                  });
-                },
+              
+              Column(
+                  children: [
+                    Radio(
+                      value: 2,
+                      groupValue: radioButton[widget.radioButton],
+                      onChanged: (var value) {
+                        setState(() {
+                          personalities[widget.personalities] =
+                              personalities[widget.personalities];
+                          radioButton[widget.radioButton] = value ?? 2;
+                        });
+                      },
+                    ),
+                    const Text('Low',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 192, 151, 117),
+                      fontSize: 12.0,
+                    )), 
+                  ]
               ),
-              Transform.scale(
-                scale: 1.2,
-                child: Radio(
-                  value: 3,
+              Column(
+                  children: [
+                    Radio(
+                      value: 3,
+                      groupValue: radioButton[widget.radioButton],
+                      onChanged: (var value) {
+                        setState(() {
+                          personalities[widget.personalities] =
+                              personalities[widget.personalities];
+                          radioButton[widget.radioButton] = value ?? 2;
+                        });
+                      },
+                    ),
+                    const Text('Indifferent',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 155, 155, 155),
+                      fontSize: 12.0,
+                    )), 
+                  ]
+              ),
+             
+                    Column(
+                      children: [
+                        Radio(
+                        value: 4,
+                        groupValue: radioButton[widget.radioButton],
+                        onChanged: (var value) {
+                          setState(() {
+                            personalities[widget.personalities] =
+                                personalities[widget.personalities];
+                            radioButton[widget.radioButton] = value ?? 2;
+                          });
+                        },
+                      ),
+                      const Text('High',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 86, 163, 84),
+                        fontSize: 12.0,
+                      )), 
+                  ]
+                  ),
+              Column(
+                      children: [
+                         Radio(
+                  value: 5,
                   groupValue: radioButton[widget.radioButton],
                   onChanged: (var value) {
                     setState(() {
@@ -88,15 +143,19 @@ class QuestionViewState extends State<QuestionWidget> {
                     });
                   },
                 ),
-              ),
-              const Text('Inaccurate',
+                const Text('Very High',
                   style: TextStyle(
-                    color: Colors.redAccent,
-                    fontSize: 20.0,
+                    color: Color.fromARGB(255, 115, 255, 150),
+                    fontSize: 12.0,
                   )),
+                      ]                      
+              ),
+              
             ],
           ),
+          
           const SizedBox(height: 10),
+          
         ],
       ),
     );

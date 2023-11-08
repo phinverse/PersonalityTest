@@ -2,8 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:psycho/constrants/routes.dart';
-import 'package:psycho/utilities/question_widget.dart';
+import 'package:export_readiness/constrants/routes.dart';
+import 'package:export_readiness/utilities/question_widget.dart';
 
 class FirstQuestionsView extends StatefulWidget {
   const FirstQuestionsView({super.key});
@@ -18,97 +18,40 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Color.fromARGB(255, 0, 131, 68),
+        title: Text("Promoters"),
       ),
       body: SingleChildScrollView(
+       padding: EdgeInsets.fromLTRB(20, 10, 10, 10), //apply padding to LTRB, L:Left, T:Top, R:Right, B:Bottom                 
         child: Column(
           children: [
+             SizedBox(height: 10),
+             Text('These sets of questions are designed to assess the readiness of the business in terms of the interest and commitment of the owners ',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                )),
             QuestionWidget(
-                text: 'You avoid being alone',
+                text: 'How committed is the business owner or management to exportation?*',
                 radioButton: 0,
-                personalities: 0),
+                personalities: 1),
             QuestionWidget(
-                text: 'You tend to make decisions quickly',
+                text: 'How realistic is the desire of the business owner or management to sell in foreign markets?"',
                 radioButton: 1,
                 personalities: 2),
             QuestionWidget(
-                text: 'You are really a curious person',
+                text: 'How experienced and familiar is the business owner or management with international business', 
                 radioButton: 2,
-                personalities: 7),
+                personalities: 3),
             QuestionWidget(
-                text: "You enjoy trying new things and",
-                text2: "Stepping outside of your comfort zone",
+                text: "Has the business owner or management any skills to manage export transactions?",
                 radioButton: 3,
-                personalities: 7),
-            QuestionWidget(
-                text: 'You prefer structured over',
-                text2: 'unstructured activities',
-                radioButton: 4,
-                personalities: 3),
-            QuestionWidget(
-                text: 'You are naturally an optimistic person',
-                radioButton: 5,
-                personalities: 6),
-            QuestionWidget(
-                text: 'You enjoy being the center of attention',
-                radioButton: 6,
-                personalities: 0),
-            QuestionWidget(
-                text: 'You consider yourself as a',
-                text2: 'highly organized person',
-                radioButton: 7,
-                personalities: 3),
-            QuestionWidget(
-                text: 'You enjoy taking on leadership roles',
-                radioButton: 8,
-                personalities: 0),
-            QuestionWidget(
-                text: 'You are nataurally a patient person',
-                radioButton: 9,
-                personalities: 7),
-            QuestionWidget(
-                text: 'You enjoy meeting',
-                text2: 'new people and socializing',
-                radioButton: 10,
-                personalities: 0),
-            QuestionWidget(
-                text: "You tend to be a private person",
-                radioButton: 11,
                 personalities: 4),
             QuestionWidget(
-                text: 'You are a logical and analytical thinker',
-                radioButton: 12,
-                personalities: 2),
-            QuestionWidget(
-                text: 'You are a creative person',
-                radioButton: 13,
-                personalities: 7),
-            QuestionWidget(
-                text: 'You enjoy physical activities and sports',
-                radioButton: 14,
+                text: 'How willing and ready is the business owner or management to fund export transactions?',
+                radioButton: 4,
                 personalities: 3),
-            QuestionWidget(
-                text: 'You generally prioritize the needs',
-                text2: 'of others over your own',
-                radioButton: 15,
-                personalities: 6),
-            QuestionWidget(
-                text: 'You are naturally an organized person',
-                radioButton: 16,
-                personalities: 7),
-            QuestionWidget(
-                text: 'You consider yourself as a perfectionist',
-                radioButton: 17,
-                personalities: 3),
-            QuestionWidget(
-                text: 'You are a good listener',
-                radioButton: 18,
-                personalities: 6),
-            QuestionWidget(
-                text: 'You enjoy being around',
-                text2: 'large groups of people',
-                radioButton: 19,
-                personalities: 0),
+           
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -140,20 +83,22 @@ class FirstQuestionsViewState extends State<FirstQuestionsView> {
                     ),
                   ),
                 ),
-                Text('...',
+                Text(' ... ',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.greenAccent,
                       fontSize: 20,
                     )),
+                
+                
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pushNamedAndRemoveUntil(
-                      thirdPageRoute,
+                      fifthPageRoute,
                       (route) => true,
                     );
                   },
-                  child: Text('3',
+                  child: Text('5',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,

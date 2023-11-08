@@ -1,4 +1,4 @@
-import 'package:psycho/constrants/globals.dart';
+import 'package:export_readiness/constrants/globals.dart';
 
 class PersonalityCalculator {
   String calculatePersonalityType() {
