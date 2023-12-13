@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:export_readiness/login_screen.dart';
 const firstPageRoute = '/firstPage/';
 const shortPageRoute = '/shortPage/';
 const secondPageRoute = '/secondPage/';
@@ -9,7 +8,7 @@ const fourthPageRoute = '/fourthPage/';
 const fifthPageRoute = '/fifthPage/';
 
 const homePageRoute = '/homePage';
-const loginPageRoute = '/loginPage/';
+//const loginPageRoute = '/loginPage/';
 
 
 class FadePageRoute<T> extends MaterialPageRoute<T> {
@@ -31,10 +30,10 @@ class FadePageRoute<T> extends MaterialPageRoute<T> {
     Animation<double> secondaryAnimation,
     Widget child,
   ) {
-    if (settings.name == LoginScreen.routeName) {
+  /*  if (settings.name == LoginScreen.routeName) {
       return child;
     }
-
+*/
     return FadeTransition(
       opacity: animation,
       child: child,
